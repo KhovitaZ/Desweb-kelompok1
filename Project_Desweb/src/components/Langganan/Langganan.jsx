@@ -26,7 +26,7 @@ function Langganan() {
                         <ul className="text-gray-600 mb-4 space-y-1">
                             <li>✔ Akses ke semua materi, termasuk materi baru</li>
                             <li>✔ Sertifikat kelulusan</li>
-                            <li>✔ Diskon untuk pembelian produk Harga Rp. 100.000</li>
+                            <li>✔ Diskon untuk pembelian produk</li>
                         </ul>
                         <div className="text-left mt-auto">
                             <p className="text-lg font-semibold text-red-500 mb-4">Rp 199.000 /bulan</p>

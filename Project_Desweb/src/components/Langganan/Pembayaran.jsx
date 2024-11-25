@@ -20,7 +20,7 @@ function Pembayaran() {
         features: [
             "✔ Akses ke semua materi, termasuk materi baru",
             "✔ Sertifikat kelulusan",
-            "✔ Diskon untuk pembelian produk Harga Rp. 100.000",
+            "✔ Diskon untuk pembelian produk",
         ],
     };
   } else if (selectedPackage === "3bulan") {
