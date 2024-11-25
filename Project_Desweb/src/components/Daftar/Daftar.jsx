@@ -1,5 +1,6 @@
 import React from 'react';
 import gambarLogin from "../../assets/login/gambarLogin.png";
+import { Link } from "react-router-dom";
 
 const RegisterPage = () => {
     return (
@@ -53,7 +54,7 @@ const RegisterPage = () => {
                         Daftar
                     </button>
                     <div className="text-center text-sm">
-                        Sudah Punya Akun? <a href="#" className="text-blue-500 hover:underline">Login</a>
+                        Sudah Punya Akun? <Link to="/login"><a href="#" className="text-blue-500 hover:underline">Login</a></Link>
                     </div>
                 </form>
             </div>

@@ -1,13 +1,14 @@
 import React from 'react';
 import gambarLogin from "../../assets/login/gambarLogin.png";
+import { Link } from "react-router-dom";
 
 const Login = () => {
     return (
         <div className="flex items-center justify-center min-h-screen bg-blue-200 relative"
         style={{
             backgroundImage: `url(${gambarLogin})`,
-            backgroundSize: 'cover',   // Menyesuaikan ukuran gambar untuk menutupi seluruh area
-            backgroundPosition: 'center', // Posisikan gambar di tengah
+            backgroundSize: 'cover',   
+            backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat'
         }}>
             {/* Bagian Kiri dengan Tulisan "STARTUP ACADEMY" dan Dekorasi */}
@@ -42,7 +43,7 @@ const Login = () => {
                         Log in
                     </button>
                     <div className="text-center text-sm">
-                        Belum Punya Akun? <a href="#" className="text-blue-500 hover:underline">Daftar</a>
+                        Belum Punya Akun? <Link to="/daftar"><a href="#" className="text-blue-500 hover:underline">Daftar</a></Link>
                     </div>
                 </form>
             </div>

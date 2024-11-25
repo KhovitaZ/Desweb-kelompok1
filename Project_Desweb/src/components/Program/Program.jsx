@@ -12,20 +12,23 @@ const ProgramData = [
     title: "Market & Strategy",
     Deskription : "Pelajari cara mengenal pasar dengan lebih baik dan bangun strategi bisnis yang kuat. Temukan langkah-langkah untuk menguasai pasar dan memenangkan persaingan!",
     aosDelay: "0",
+    link: "/marketStrategy",
   },
   {
     id: 2,
     img: Img2,
-    title: "Market & Strategy",
+    title: "Financial Benchmarks",
     Deskription : "Ketahui bagaimana mengelola keuangan startup dengan efektif. Dari membuat anggaran hingga memahami financial benchmarks yang krusial, jadikan keuangan sebagai landasan kokoh untuk pertumbuhan bisnismu.",
     aosDelay: "200",
+    link: "/financialBenchmarks",
   },
   {
     id: 3,
     img: Img3,
-    title: "Market & Strategy",
+    title: "Saham & Pasar Modal",
     Deskription : "Jelajahi dunia pendanaan startup! Pelajari cara menarik investor, menyusun strategi penggalangan dana, dan bagaimana mendapatkan modal yang tepat untuk membawa startup Anda ke level berikutnya.",
     aosDelay: "400",
+    link: "/sahamPasarModal",
   },
 ];
 
@@ -83,9 +86,11 @@ const Program = () => {
                   </div>
                   <div className="flex items-center">
                     <button className="w-full md:w-[192px] h-[40px] rounded-[30px] border-[#55B0F1] border-2 hover:bg-[#55B0F1] transition">
-                      <p className="text-[12px] font-medium text-center">
-                        Lihat selengkapnya
-                      </p>
+                      <Link to={data.link}>
+                        <p className="text-[12px] font-medium text-center">
+                          Lihat selengkapnya
+                        </p>
+                      </Link>
                     </button>
                   </div>
                 </div>
