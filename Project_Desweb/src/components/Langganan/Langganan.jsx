@@ -30,7 +30,7 @@ function Langganan() {
                         </ul>
                         <div className="text-left mt-auto">
                             <p className="text-lg font-semibold text-red-500 mb-4">Rp 199.000 /bulan</p>
-                            <Link to="/Pembayaran">
+                            <Link to="/pembayaran">
                                 <button className="bg-yellow-400 text-black px-4 py-2 rounded-lg font-semibold w-full hover:bg-yellow-500">Beli Sekarang</button>
                             </Link>
                         </div>

@@ -19,24 +19,36 @@ const HomePage = () => {
   return (
     <div>
       <Navbar />
-      <div className="flex flex-row justify-between items-center mt-32 mx-14 gap-8">
-        <div className="flex flex-col justify-start gap-5">
-          <div>
-            <h1 className="text-[37px] font-bold">Bangun Startup</h1>
-            <h1 className="text-[37px] font-bold">Impianmu Bersama Kami!</h1>
-            <p className="text-[16px] font-light">Jadilah Pengusaha handal dengan mempelajari strategi bisnis,</p>
-            <p className="text-[16px] font-light">keuangan dan lebih banyak lagi di Startup Academy</p>
-          </div>
-          <div>
-            <button className="h-[40px] w-[217px] text-[16px] font-medium flex justify-center items-center bg-gradient-to-r from-[#FFEEAE] to-[#FDD22F] text-black py-2 px-4 rounded-[8px] hover:from-yellow-500 hover:to-yellow-600">
-              <p>Mulai Belajar Sekarang</p>
-            </button>
-          </div>
-        </div>
-        <div className="flex justify-center items-center">
-          <img src={imageHome} className="h-[58px] w-[443px] md:h-[158px] md:w-[543px] lg:h-[258px] lg:w-[643px] xl:h-[358px] xl:w-[743px]"/>
-        </div>
-      </div>
+      <div className="flex flex-col-reverse lg:flex-row justify-between items-center mt-16 lg:mt-32 mx-6 md:mx-10 lg:mx-14 gap-8">
+  {/* Bagian Teks */}
+  <div className="flex flex-col justify-start gap-5 text-center lg:text-left">
+    <div>
+      <h1 className="text-[24px] md:text-[32px] lg:text-[37px] font-bold leading-snug">
+        Bangun Startup <br className="block lg:hidden" />
+        Impianmu Bersama Kami!
+      </h1>
+      <p className="text-[14px] md:text-[16px] font-light leading-relaxed">
+        Jadilah Pengusaha handal dengan mempelajari strategi bisnis,
+        keuangan dan lebih banyak lagi di Startup Academy.
+      </p>
+    </div>
+    <div className="flex justify-center lg:justify-start">
+      <button className="h-[40px] w-[200px] md:w-[217px] text-[14px] md:text-[16px] font-medium flex justify-center items-center bg-gradient-to-r from-[#FFEEAE] to-[#FDD22F] text-black py-2 px-4 rounded-[8px] hover:from-yellow-500 hover:to-yellow-600 transition duration-300">
+        <p>Mulai Belajar Sekarang</p>
+      </button>
+    </div>
+  </div>
+
+  {/* Bagian Gambar */}
+  <div className="flex justify-center items-center">
+    <img
+      src={imageHome}
+      alt="Home Illustration"
+      className="h-[150px] w-[300px] sm:h-[200px] sm:w-[400px] md:h-[300px] md:w-[500px] lg:h-[350px] lg:w-[600px] xl:h-[400px] xl:w-[700px] transition duration-300"
+    />
+  </div>
+</div>
+
       <Program />
       <Event />
       <Berita />

@@ -43,42 +43,43 @@ const ProgramData = [
 
 const Berita = () => {
   return (
-    <div id="berita" className="h-[703px] mt-14 mb-12 bg-gradient-to-b from-[#EEEEEE] via-[#D4EDFF] to-[#87CCFF]">
+    <div id="berita" className="mt-14 mb-12 bg-gradient-to-b from-[#EEEEEE] via-[#D4EDFF] to-[#87CCFF]">
       <div className="container pt-[52px]">
-        {/* Header section */}
+        {/* Header Section */}
         <div className="flex justify-center mb-10 max-w-[600px] mx-auto">
           <h1 data-aos="fade-up" className="text-[37px] font-bold">
             Berita Terbaru
           </h1>
         </div>
-        {/* Body section */}
+        {/* Body Section */}
         <div className="flex flex-col gap-4">
           <Link to="/SubBerita">
-          <div className="flex justify-end font-bold gap-2">
-            <p>Lihat Selengkapnya</p>
-            <img src={iconPanah}/>
-          </div>
+            <div className="flex justify-end font-bold gap-2">
+              <p>Lihat Selengkapnya</p>
+              <img src={iconPanah} alt="Arrow" />
+            </div>
           </Link>
-          <div className="flex flex-row items-center gap-5">
-            {/* card section */}
+
+          {/* Grid Section */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
             {ProgramData.map((data) => (
               <div
                 data-aos="fade-up"
                 data-aos-delay={data.aosDelay}
                 key={data.id}
-                className="flex flex-col w-[429px] h-[432px] border-[#E7E7E7] border-2 rounded-[20px] p-5 bg-white gap-3"
+                className="flex flex-col w-full h-[432px] border-[#E7E7E7] border-2 rounded-[20px] p-5 bg-white gap-3"
               >
                 <div className="flex justify-end">
-                    <div className="h-[28px] w-[102px] flex justify-center items-center bg-gradient-to-r from-[#FFEEAE] to-[#FDD22F] text-black font-bold py-2 px-4 rounded-[30px] hover:from-yellow-500 hover:to-yellow-600">
-                        <p className="font-bold text-[12px]">{data.filter}</p>
-                    </div>
+                  <div className="h-[28px] w-[102px] flex justify-center items-center bg-gradient-to-r from-[#FFEEAE] to-[#FDD22F] text-black font-bold py-2 px-4 rounded-[30px] hover:from-yellow-500 hover:to-yellow-600">
+                    <p className="font-bold text-[12px]">{data.filter}</p>
+                  </div>
                 </div>
                 <div>
-                    <img src={data.img} className="h-[157px] w-[363px] object-cover rounded-[20px]"/>
-                    <div className="flex flex-col justify-between gap-5 mt-4">
-                        <h3 className="text-[15px] font-bold">{data.title}</h3>
-                        <p className="text-[12px] font-light text-gray-600">{data.Deskription}</p>
-                    </div>
+                  <img src={data.img} className="h-[157px] w-[363px] object-cover rounded-[20px]" />
+                  <div className="flex flex-col justify-between gap-5 mt-4">
+                    <h3 className="text-[15px] font-bold">{data.title}</h3>
+                    <p className="text-[12px] font-light text-gray-600">{data.Deskription}</p>
+                  </div>
                 </div>
               </div>
             ))}
@@ -86,6 +87,10 @@ const Berita = () => {
         </div>
       </div>
     </div>
+
+
+
+
   );
 };
 

@@ -1,46 +1,120 @@
-import React from 'react';
+import React, { useState } from "react";
 
-function Pembayaran() {
-    <div className="min-h-screen bg-gradient-to-b from-blue-100 to-blue-200 flex items-center justify-center">
-        <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-3xl">
-          {/* Header */}
-          <div className="flex items-center mb-4">
-            <button className="text-gray-500 hover:text-gray-700">
-              {/* Back Arrow Icon (replace with an actual icon if needed) */}
-              <span>&larr;</span>
-            </button>
-            <h1 className="ml-4 text-lg font-semibold">Payment</h1>
+const Pembayaran = () => {
+  const [selectedMethod, setSelectedMethod] = useState("");
+
+  const handlePaymentChange = (method) => {
+    setSelectedMethod(method);
+  };
+
+  return (
+    <div className="bg-blue-50 min-h-screen p-6 flex justify-center items-center">
+      <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-xl">
+        {/* Detail Pemesanan */}
+        <div className="flex justify-between items-center mb-6">
+          <div>
+            <h2 className="text-lg font-bold">Detail Pemesanan</h2>
+            <p className="mt-2 text-sm">Paket 1 bulan (30 hari)</p>
+            <p className="text-sm">Akses ke semua materi, termasuk materi baru</p>
+            <p className="text-sm">Sertifikat kelulusan</p>
+            <p className="mt-4 text-xl font-semibold text-red-600">Rp 179.000</p>
           </div>
-          <hr className="mb-8" />
-  
-          {/* Main Content */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Left Box: Package Details */}
-            <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-              <h2 className="text-md font-medium mb-4">Paket 1 Bulan</h2>
-              <div className="text-gray-600 mb-2">Total</div>
-              <div className="text-2xl font-bold text-gray-800 mb-4">Rp 199.000</div>
-              <div className="flex justify-center">
-      <button className="px-6 py-2 bg-blue-400 text-white rounded-md hover:bg-blue-600">
-        Continue
-      </button>
-    </div>
-  </div>
-  
-            {/* Right Box: Payment Methods */}
-            <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-            <p className="mb-4 text-center font-semibold">Choose Payment Method</p>
-            <p className="mb-4 text-center font-semibold text-gray-900">Virtual Account</p>
-            <div className="flex flex-col items-center space-y-2">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Logo_BRI.png" alt="BRI" className="w-20" />
-              <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/BCA_logo.svg" alt="BCA" className="w-20" />
-              <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Logo_Bank_Negara_Indonesia_%28BNI%29.svg" alt="BNI" className="w-20" />
-              <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Bank_Mandiri_logo.png" alt="Mandiri" className="w-20" />
-              </div>
+          <div className="bg-blue-50 p-4 rounded-lg">
+            <h3 className="text-sm font-bold">Detail Pembayaran</h3>
+            <p className="mt-1 text-sm">Paket Premium Academy</p>
+            <p className="text-sm">Rp 179.000</p>
+          </div>
+        </div>
+
+        {/* Metode Pembayaran */}
+        <h2 className="text-lg font-bold mb-4">Metode Pembayaran</h2>
+        <div className="grid grid-cols-2 gap-4">
+          {/* Transfer Virtual Account */}
+          <div>
+            <h3 className="text-sm font-semibold mb-2">Transfer Virtual Account</h3>
+            <div className="flex flex-col space-y-2">
+              {["BRI", "BCA", "BNI", "Mandiri"].map((bank) => (
+                <label
+                  key={bank}
+                  className={`flex items-center p-2 border rounded-md ${
+                    selectedMethod === bank ? "border-blue-500" : "border-gray-300"
+                  } cursor-pointer`}
+                >
+                  <input
+                    type="radio"
+                    name="paymentMethod"
+                    className="mr-2"
+                    value={bank}
+                    checked={selectedMethod === bank}
+                    onChange={() => handlePaymentChange(bank)}
+                  />
+                  {bank}
+                </label>
+              ))}
+            </div>
+          </div>
+
+          {/* E-Wallet */}
+          <div>
+            <h3 className="text-sm font-semibold mb-2">E-Wallet</h3>
+            <div className="flex flex-col space-y-2">
+              {["ShopeePay", "GoPay"].map((wallet) => (
+                <label
+                  key={wallet}
+                  className={`flex items-center p-2 border rounded-md ${
+                    selectedMethod === wallet ? "border-blue-500" : "border-gray-300"
+                  } cursor-pointer`}
+                >
+                  <input
+                    type="radio"
+                    name="paymentMethod"
+                    className="mr-2"
+                    value={wallet}
+                    checked={selectedMethod === wallet}
+                    onChange={() => handlePaymentChange(wallet)}
+                  />
+                  {wallet}
+                </label>
+              ))}
+            </div>
+          </div>
+
+          {/* Minimarket */}
+          <div>
+            <h3 className="text-sm font-semibold mb-2">Minimarket</h3>
+            <div className="flex flex-col space-y-2">
+              {["Indomaret", "Alfamidi"].map((minimarket) => (
+                <label
+                  key={minimarket}
+                  className={`flex items-center p-2 border rounded-md ${
+                    selectedMethod === minimarket ? "border-blue-500" : "border-gray-300"
+                  } cursor-pointer`}
+                >
+                  <input
+                    type="radio"
+                    name="paymentMethod"
+                    className="mr-2"
+                    value={minimarket}
+                    checked={selectedMethod === minimarket}
+                    onChange={() => handlePaymentChange(minimarket)}
+                  />
+                  {minimarket}
+                </label>
+              ))}
             </div>
           </div>
         </div>
+
+        {/* Tombol Bayar */}
+        <button
+          className="mt-6 w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 rounded-md"
+          onClick={() => alert(`Metode pembayaran: ${selectedMethod}`)}
+        >
+          Bayar Sekarang
+        </button>
       </div>
-}
+    </div>
+  );
+};
 
 export default Pembayaran;
