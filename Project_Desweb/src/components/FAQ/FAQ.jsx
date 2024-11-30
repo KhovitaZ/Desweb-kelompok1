@@ -10,43 +10,43 @@ const FAQ = () => {
   };
 
   return (
-    <div id="FAQ" className="h-auto mt-14 mb-12 p-8">
+    <div id="FAQ" className="h-auto mt-14 mb-12 p-8 text-black dark:text-white">
   <h1 className="text-center text-[37px] font-bold mb-8">FAQ</h1>
   
   {/* FAQ Item 1 */}
-  <div className="border-b border-gray-300 py-4">
+  <div className="border-b border-gray-300 dark:border-gray-600 py-4">
     <div className="flex justify-between items-center cursor-pointer" onClick={() => toggleExpand(1)}>
       <h2 className="text-[20px] sm:text-[28px] font-bold">1. Apa itu Startup Academy?</h2>
       <span className="text-3xl text-[#FFCA00]">{expandedIndex === 1 ? '-' : '+'}</span>
     </div>
     {expandedIndex === 1 && (
-      <p className="mt-2 text-gray-700 text-[14px] sm:text-[15px]">
+      <p className="mt-2 text-gray-700 dark:text-gray-300 text-[14px] sm:text-[15px]">
         Jawaban: Startup Academy adalah platform pembelajaran online yang dirancang untuk membantu calon pengusaha dan startup dalam memahami berbagai aspek penting dalam memulai dan mengembangkan bisnis, seperti strategi pasar, keuangan, pengembangan produk, hingga manajemen tim.
       </p>
     )}
   </div>
 
   {/* FAQ Item 2 */}
-  <div className="border-b border-gray-300 py-4">
+  <div className="border-b border-gray-300 dark:border-gray-600 py-4">
     <div className="flex justify-between items-center cursor-pointer" onClick={() => toggleExpand(2)}>
       <h2 className="text-[20px] sm:text-[28px] font-bold">2. Program apa saja yang ditawarkan di Startup Academy?</h2>
       <span className="text-3xl text-[#FFCA00]">{expandedIndex === 2 ? '-' : '+'}</span>
     </div>
     {expandedIndex === 2 && (
-      <p className="mt-2 text-gray-700 text-[14px] sm:text-[15px]">
+      <p className="mt-2 text-gray-700 dark:text-gray-300 text-[14px] sm:text-[15px]">
         Kami menawarkan program yang mencakup berbagai topik seperti Market & Strategy, Financial Planning, Product Development, Sales & Customer Acquisition, Growth Hacking, Legal & Compliance, dan banyak lagi.
       </p>
     )}
   </div>
 
   {/* FAQ Item 3 */}
-  <div className="border-b border-gray-300 py-4">
+  <div className="border-b border-gray-300 dark:border-gray-600 py-4">
     <div className="flex justify-between items-center cursor-pointer" onClick={() => toggleExpand(3)}>
       <h2 className="text-[20px] sm:text-[28px] font-bold">3. Apakah ada prasyarat untuk mengikuti program?</h2>
       <span className="text-3xl text-[#FFCA00]">{expandedIndex === 3 ? '-' : '+'}</span>
     </div>
     {expandedIndex === 3 && (
-      <p className="mt-2 text-gray-700 text-[14px] sm:text-[15px]">
+      <p className="mt-2 text-gray-700 dark:text-gray-300 text-[14px] sm:text-[15px]">
         Jawaban: Tidak ada prasyarat khusus, namun pengetahuan dasar tentang bisnis atau teknologi akan membantu mempercepat pemahaman materi.
       </p>
     )}
@@ -59,7 +59,7 @@ const FAQ = () => {
       <span className="text-3xl text-[#FFCA00]">{expandedIndex === 4 ? '-' : '+'}</span>
     </div>
     {expandedIndex === 4 && (
-      <p className="mt-2 text-gray-700 text-[14px] sm:text-[15px]">
+      <p className="mt-2 text-gray-700 dark:text-gray-300 text-[14px] sm:text-[15px]">
         Jawaban: Ya, Anda bisa berinteraksi dengan mentor melalui sesi tanya jawab, webinar, dan forum diskusi yang tersedia selama program berlangsung.
       </p>
     )}

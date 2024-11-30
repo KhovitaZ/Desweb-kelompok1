@@ -5,7 +5,7 @@ import {FaFacebook,FaInstagram} from "react-icons/fa";
 const Footer = () => {
   return (
     <div className="text-black dark:text-white">
-       <footer className="bg-gray-100 py-8">
+       <footer className="bg-gray-100 dark:bg-gray-900 py-8 text-black dark:text-gray-300">
       <div className="container px-2 md:px-4">
         <div className="gap-1 md:gap-8 flex justify-between items-center">
           <div className="flex flex-row">
@@ -28,14 +28,14 @@ const Footer = () => {
             </div>
           </div>
           <div className="text-center md:text-left space-y-2">
-            <a href="#" className="text-[8px] sm:text-[15px] md:text-[19px] font-semibold block hover:underline">Tentang Kami</a>
-            <a href="#" className="text-[8px] sm:text-[15px] md:text-[19px] font-semibold block hover:underline">Hubungi Kami</a>
-            <a href="#" className="text-[8px] sm:text-[15px] md:text-[19px] font-semibold block hover:underline">FAQ</a>
+            <a href="#" className="text-[8px] sm:text-[15px] md:text-[19px] font-semibold block hover:underline dark:hover:text-gray-400">Tentang Kami</a>
+            <a href="#" className="text-[8px] sm:text-[15px] md:text-[19px] font-semibold block hover:underline dark:hover:text-gray-400">Hubungi Kami</a>
+            <a href="#" className="text-[8px] sm:text-[15px] md:text-[19px] font-semibold block hover:underline dark:hover:text-gray-400">FAQ</a>
           </div>
         </div>
 
         <div className="mt-8 border-t pt-4 flex items-center justify-between text-[8px] sm:text-sm text-black">
-          <span>© copyright 2024 | Startup Academy Indonesia</span>
+          <span className="dark:text-gray-500">© copyright 2024 | Startup Academy Indonesia</span>
           <div>
             <a href="#" className="hover:underline">Terms</a> | <a href="#" className="hover:underline">Privacy</a>
           </div>

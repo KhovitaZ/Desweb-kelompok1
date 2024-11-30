@@ -17,7 +17,7 @@ const HomePage = () => {
   };
 
   return (
-    <div>
+    <div className="dark:bg-gray-900 dark:text-white">
       <Navbar />
       <div className="flex flex-col-reverse lg:flex-row justify-between items-center mt-16 lg:mt-32 mx-6 md:mx-10 lg:mx-14 gap-8">
   {/* Bagian Teks */}
@@ -33,7 +33,7 @@ const HomePage = () => {
       </p>
     </div>
     <div className="flex justify-center lg:justify-start">
-      <button className="h-[40px] w-[200px] md:w-[217px] text-[14px] md:text-[16px] font-medium flex justify-center items-center bg-gradient-to-r from-[#FFEEAE] to-[#FDD22F] text-black py-2 px-4 rounded-[8px] hover:from-yellow-500 hover:to-yellow-600 transition duration-300">
+      <button className="h-[40px] w-[200px] md:w-[217px] text-[14px] md:text-[16px] font-medium flex justify-center items-center bg-gradient-to-r from-[#FFEEAE] to-[#FDD22F] text-black py-2 px-4 rounded-[8px] hover:from-yellow-500 hover:to-yellow-600 transition duration-300 dark:from-gray-700 dark:to-gray-800 dark:text-white">
         <p>Mulai Belajar Sekarang</p>
       </button>
     </div>
