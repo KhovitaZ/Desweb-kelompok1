@@ -21,9 +21,9 @@ const HomePage = () => {
       <Navbar />
       <div className="flex flex-col-reverse lg:flex-row justify-between items-center mt-16 lg:mt-32 mx-6 md:mx-10 lg:mx-14 gap-8">
   {/* Bagian Teks */}
-  <div className="flex flex-col justify-start gap-5 text-center lg:text-left">
+  <div className="flex flex-col justify-start gap-5 text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
     <div>
-      <h1 className="text-[24px] md:text-[32px] lg:text-[37px] font-bold leading-snug">
+      <h1 className="text-[24px] sm:text-[28px] md:text-[32px] lg:text-[37px] font-bold leading-snug">
         Bangun Startup <br className="block lg:hidden" />
         Impianmu Bersama Kami!
       </h1>

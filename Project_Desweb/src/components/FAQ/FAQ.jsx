@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 
 const FAQ = () => {
-  // State untuk menyimpan pertanyaan mana yang diperluas
+  // Buat nyimpan pertanyaan mana yang diperluas
   const [expandedIndex, setExpandedIndex] = useState(null);
 
-  // Fungsi untuk toggle pertanyaan yang dipilih
+  // Buat toggle pertanyaan yang dipilih
   const toggleExpand = (index) => {
     setExpandedIndex(expandedIndex === index ? null : index);
   };
 
   return (
-    <div id="FAQ" className="h-auto mt-14 mb-12 p-8 text-black dark:text-white">
-  <h1 className="text-center text-[37px] font-bold mb-8">FAQ</h1>
+    <div id="FAQ" className="h-auto mt-14 mb-12 px-6 sm:px-10 lg:px-14 text-black dark:text-white">
+  <h1 className="text-center text-[28px] sm:text-[37px] font-bold mb-8">FAQ</h1>
   
   {/* FAQ Item 1 */}
   <div className="border-b border-gray-300 dark:border-gray-600 py-4">
@@ -66,17 +66,17 @@ const FAQ = () => {
   </div>
 
   {/* Call to Action Section */}
-  <div data-aos="zoom-in" className="flex justify-center">
+  <div data-aos="zoom-in" className="flex justify-center mt-14">
     <div
-      className="p-5 flex justify-center h-auto sm:h-[410px] w-full sm:w-[1022px] mt-20 bg-[#91D1FF] dark:bg-gray-800 rounded-[30px]">
-      <div className="flex flex-col justify-center items-center backdrop-blur-sm gap-5">
+      className="p-5 flex justify-center h-auto sm:h-[410px] w-full sm:w-[1022px] bg-[#91D1FF] dark:bg-gray-800 rounded-[30px]">
+      <div className="flex flex-col justify-center items-center gap-5 text-center">
         <h1 className="text-[20px] sm:text-[36px] !text-center sm:text-left sm:text-4xl font-bold">
           Jangan tunda lagi
         </h1>
-        <p className="text-[14px] sm:text-[23px] flex justify-center items-center">Ayo pelajari cara membangun</p>
-        <p className="text-[14px] sm:text-[23px] flex justify-center items-center">bisnis masa depanmu</p>
-        <button className="mt-2 h-[40px] w-[217px] flex justify-center items-center bg-gradient-to-r from-[#FFEEAE] to-[#FDD22F] text-black py-2 px-4 rounded-[30px] hover:from-yellow-500 hover:to-yellow-600">
-          <p className="font-medium text-[18px] sm:text-[21px]">Belajar Sekarang</p>
+        <p className="text-[14px] sm:text-[20px] flex justify-center items-center">Ayo pelajari cara membangun</p>
+        <p className="text-[14px] sm:text-[20px] flex justify-center items-center">bisnis masa depanmu</p>
+        <button className="mt-2 h-[40px] w-[217px] sm:w-[240px] flex justify-center items-center bg-gradient-to-r from-[#FFEEAE] to-[#FDD22F] text-black py-2 px-4 rounded-[30px] hover:from-yellow-500 hover:to-yellow-600">
+          <p className="font-medium text-[16px] sm:text-[18px]">Belajar Sekarang</p>
         </button>
       </div>
     </div>
