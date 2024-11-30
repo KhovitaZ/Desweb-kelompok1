@@ -55,6 +55,11 @@ function Pembayaran() {
   // Total harga sesudah diskon
   const totalPrice = packageDetails.price - packageDetails.discount;
 
+  const scrollTometodepembayaran = () => {
+    const target = document.getElementById("metodepembayaran");
+    target?.scrollIntoView({ behavior: "smooth" });
+  };  
+
   return ( 
     <div className="p-4 md:p-8 bg-gradient-to-b from-blue-50 to-blue-100 min-h-screen">
       <div className="flex flex-col lg:flex-row gap-4 mb-8">
@@ -95,7 +100,7 @@ function Pembayaran() {
               <p className="text-red-400">Rp {totalPrice.toLocaleString()}</p>
             </div>
           </div>
-          <button className="mt-4 py-2 px-3 bg-yellow-500 text-white font-semibold rounded-full w-full text-center">
+          <button onClick={scrollTometodepembayaran} className="mt-4 py-2 px-3 bg-yellow-500 text-white font-semibold rounded-full w-full text-center">
             Pilih Metode Bayar
           </button>
           <p className="mt-2 text-xs text-gray-500 text-left">
@@ -105,7 +110,7 @@ function Pembayaran() {
       </div>
 
       {/* Metode Pembayaran */}
-      <div className="p-4 md:p-6 bg-white rounded-lg shadow-lg">
+      <div id="metodepembayaran" className="p-4 md:p-6 bg-white rounded-lg shadow-lg">
         <h2 className="font-semibold text-lg mb-4">Metode Pembayaran</h2>
 
         <div className="mb-6">
@@ -114,21 +119,21 @@ function Pembayaran() {
             <div className="flex flex-col gap-4">
               <label className="flex items-center gap-2">
                 <input type="radio" name="payment-method" className="form-radio text-blue-500" />
-                <img src="path/to/bank-bri.png" alt="Bank BRI" className="h-6" />
+                <img src="/src/assets/pembayaran/bri.png" alt="Bank BRI" className="h-6" />
               </label>
               <label className="flex items-center gap-2">
                 <input type="radio" name="payment-method" className="form-radio text-blue-500" />
-                <img src="path/to/bni.png" alt="BNI" className="h-6" />
+                <img src="/src/assets/pembayaran/bni.png" alt="BNI" className="h-6" />
               </label>
             </div>
             <div className="flex flex-col gap-4">
               <label className="flex items-center gap-2">
                 <input type="radio" name="payment-method" className="form-radio text-blue-500" />
-                <img src="path/to/bca.png" alt="BCA" className="h-6" />
+                <img src="/src/assets/pembayaran/bca.png" alt="BCA" className="h-6" />
               </label>
               <label className="flex items-center gap-2">
                 <input type="radio" name="payment-method" className="form-radio text-blue-500" />
-                <img src="path/to/mandiri.png" alt="Mandiri" className="h-6" />
+                <img src="/src/assets/pembayaran/mandiri.png" alt="Mandiri" className="h-6" />
               </label>
             </div>
           </div>
@@ -139,11 +144,11 @@ function Pembayaran() {
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 p-4 bg-yellow-50 rounded-lg">
             <label className="flex items-center gap-2">
               <input type="radio" name="payment-method" className="form-radio text-yellow-500" />
-              <img src="path/to/shopeepay.png" alt="ShopeePay" className="h-6" />
+              <img src="/src/assets/pembayaran/shopeepay.png" alt="ShopeePay" className="h-6" />
             </label>
             <label className="flex items-center gap-2">
               <input type="radio" name="payment-method" className="form-radio text-yellow-500" />
-              <img src="path/to/gopay.png" alt="GoPay" className="h-6" />
+              <img src="/src/assets/pembayaran/GOPAY.png" alt="GoPay" className="h-6" />
             </label>
           </div>
         </div>
@@ -153,11 +158,11 @@ function Pembayaran() {
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 p-4 bg-gray-100 rounded-lg">
             <label className="flex items-center gap-2">
               <input type="radio" name="payment-method" className="form-radio text-gray-500" />
-              <img src="path/to/indomaret.png" alt="Indomaret" className="h-6" />
+              <img src="/src/assets/pembayaran/indomaret.jpg" alt="Indomaret" className="h-6" />
             </label>
             <label className="flex items-center gap-2">
               <input type="radio" name="payment-method" className="form-radio text-gray-500" />
-              <img src="path/to/alfamidi.png" alt="Alfamidi" className="h-6" />
+              <img src="/src/assets/pembayaran/alfamart.png" alt="Alfamidi" className="h-6" />
             </label>
           </div>
         </div>
