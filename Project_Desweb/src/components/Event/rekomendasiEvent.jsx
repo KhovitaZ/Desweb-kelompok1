@@ -36,7 +36,7 @@ const ProgramData = [
     price: "Rp 185.000",
     discount: "50%",
     actualPrice: "Rp 370.000",
-    link: "/IsiEvent1",
+    link: "/IsiEvent2",
   },
   {
     id: 3,
@@ -50,7 +50,7 @@ const ProgramData = [
     price: "Rp 185.000",
     discount: "50%",
     actualPrice: "Rp 370.000",
-    link: "/IsiEvent1",
+    link: "/IsiEvent3",
   },
   {
     id: 4,
@@ -64,7 +64,7 @@ const ProgramData = [
     price: "Rp 185.000",
     discount: "50%",
     actualPrice: "Rp 370.000",
-    link: "/IsiEvent1",
+    link: "/IsiEvent4",
   },
 ];
 

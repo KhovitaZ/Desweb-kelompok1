@@ -1,7 +1,14 @@
 import React from "react";
+import berita1 from "../../assets/berita/berita1.svg";
+import berita10 from "../../assets/berita/berita10.svg";
+import berita5 from "../../assets/berita/berita5.svg";
+import berita11 from "../../assets/berita/berita11.svg";
+import berita12 from "../../assets/berita/berita12.svg";
+import berita8 from "../../assets/berita/berita8.svg";
+import berita9 from "../../assets/berita/berita9.svg";
 import { Link } from "react-router-dom";
 
-const Berita = () => {
+const Finansial = () => {
   return (
     <div className="bg-white p-4 md:p-8 lg:px-16 flex flex-col lg:flex-row gap-8">
       {/* Konten Kiri */}
@@ -12,7 +19,7 @@ const Berita = () => {
         {/* Highlighted Article */}
         <div className="mb-8">
           <img
-            src="https://via.placeholder.com/831x388" // Ganti dengan URL gambar artikel utama
+            src={berita1}
             alt="Artikel Utama"
             className="w-full rounded-md mb-4"
           />
@@ -40,7 +47,7 @@ const Berita = () => {
               category: "Finansial",
               description:
                 "Panduan strategis mengelola arus kas startup mencakup perencanaan keuangan, pengendalian biaya, pemantauan pendapatan, dan menjaga likuiditas bisnis.",
-              image: "https://via.placeholder.com/200x120", // Ganti URL gambar
+              image: berita10, // Ganti URL gambar
             },
             {
               title: "Pentingnya Financial KPI untuk Mengukur Keberhasilan Startup",
@@ -48,7 +55,7 @@ const Berita = () => {
               category: "Finansial",
               description:
                 "Memahami kinerja keuangan, mengevaluasi keberhasilan, mengoptimalkan strategi bisnis, dan menarik perhatian investor.",
-              image: "https://via.placeholder.com/200x120",
+              image: berita5,
             },
             {
               title: "Mengenal Revenue Model yang Cocok untuk Startup Baru Anda",
@@ -56,7 +63,7 @@ const Berita = () => {
               category: "Finansial",
               description:
                 "Berbagai revenue model seperti subscription, freemium, dan licensing untuk menemukan strategi pendapatan terbaik bagi startup Anda.",
-              image: "https://via.placeholder.com/200x120",
+              image: berita11,
             },
             {
                 title: "Bagaimana Startup Bisa Bertahan di Tengah Ketidakpastiaan Ekonomi",
@@ -64,7 +71,7 @@ const Berita = () => {
                 category: "Finansial",
                 description:
                   "Strategi bertahan startup: kelola arus kas, adaptasi cepat, inovasi produk, efisiensi biaya dan fokus kebutuhan pasar.",
-                image: "https://via.placeholder.com/200x120",
+                image: berita12,
             },
             {
                 title: "Tantangan yang Dihadapi Startup dalam Mencetak Pengusaha Sukses",
@@ -72,7 +79,7 @@ const Berita = () => {
                 category: "Finansial",
                 description:
                   "Menghadapi tantangan dalam pembiayaan, pengelolaan arus kas, adaptasi pasar, dan membangun tim yang solid untuk sukses.",
-                image: "https://via.placeholder.com/200x120",
+                image: berita8,
             },
             {
                 title: "Pahami Kunci Kesuksesan Startup Melalui Startup Academy",
@@ -80,7 +87,7 @@ const Berita = () => {
                 category: "Finansial",
                 description:
                   "Strategi sukses startup melalui Startup Academy, dengan fokus pada finansial, perencanaan, inovasi, dan pengembangan bisnis yang efektif.",
-                image: "https://via.placeholder.com/200x120",
+                image: berita9,
             },
 
           ].map((article, index) => (
@@ -103,24 +110,8 @@ const Berita = () => {
         </div>
       </div>
 
-      {/* Sidebar Kanan */}
-      <div className="lg:w-1/4">
-        <div className="text-[#B04343] text-lg font-bold mb-4"># Topik</div>
-        <div className="flex flex-wrap gap-2">
-          {["Finansial", "Teknologi", "Tips & Trick", "Produk", "UMKM", "Kisah Sukses"].map(
-            (topic, index) => (
-              <span
-                key={index}
-                className="px-4 py-2 bg-white text-black text-sm border border-yellow-500 rounded-full cursor-pointer hover:bg-yellow-100"
-              >
-                {topic}
-              </span>
-            )
-          )}
-        </div>
-      </div>
     </div>
   );
 };
 
-export default Berita;
+export default Finansial;

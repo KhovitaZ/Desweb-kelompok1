@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaFacebookF, FaWhatsapp, FaTelegramPlane, FaLink } from "react-icons/fa";
 import berita1 from "../../assets/berita/berita1.svg";
 import berita4 from "../../assets/berita/berita4.svg";
 import berita5 from "../../assets/berita/berita5.svg";
@@ -44,27 +45,28 @@ function IsiBerita() {
                     <div className="w-2/3">
                         <h1 className="text-4xl font-bold text-black mb-2">Tips dan Trik: Mengelola Waktu dan Memilih Tim Untuk Startup</h1>
                         <p className="text-gray-500 text-lg mb-4">Membangun startup yang sukses membutuhkan pengelolaan waktu yang efisien, tim yang solid, serta tips dan trik praktis untuk menghadapi tantangan ini.</p>
-
-                        <div className="flex items-center gap-4 mb-6 text-black">
-                            <img
-                                src={people1} />
-                            <div>
-                                <div className='flex flex-row'>
-                                <p className='font-bold text-[16px]'>Hermanus Johan</p>
-                                <p className='font-normal text-[16px]'> -  Startup Academy</p>
+                        
+                        <div className='flex flex-row justify-between'>
+                            <div className="flex items-center gap-4 mb-6 text-black">
+                                <img
+                                    src={people1} />
+                                <div>
+                                    <div className='flex flex-row'>
+                                    <p className='font-bold text-[16px]'>Hermanus Johan</p>
+                                    <p className='font-normal text-[16px]'> -  Startup Academy</p>
+                                    </div>
+                                    <p className='text-[#868686] text-[13px]'>Jumat, 15 November 2024</p>
                                 </div>
-                                <p className='text-[#868686] text-[13px]'>Jumat, 15 November 2024</p>
                             </div>
-                        </div>
 
-                        <div className="flex items-center gap-3 mb-6">
-                            <p className="text-gray-700">Share</p>
-                            <div className="flex gap-3 text-blue-500">
-                                <i className="fab fa-twitter cursor-pointer"></i>
-                                <i className="fab fa-facebook cursor-pointer"></i>
-                                <i className="fab fa-whatsapp cursor-pointer"></i>
-                                <i className="fab fa-telegram cursor-pointer"></i>
-                                <i className="fas fa-link cursor-pointer"></i>
+                            <div className="flex items-center gap-3 mb-6">
+                                <p className="text-gray-700">Share</p>
+                                <div className="flex gap-4 text-xl text-gray-600">
+                                    <FaFacebookF className="text-[#395186] cursor-pointer" />
+                                    <FaWhatsapp className="text-green-500 cursor-pointer" />
+                                    <FaTelegramPlane className="text-blue-500 cursor-pointer" />
+                                    <FaLink className="text-gray-800 cursor-pointer" />
+                                </div>
                             </div>
                         </div>
 
@@ -108,19 +110,44 @@ function IsiBerita() {
 
                     <div className="lg:w-1/4">
                         <div className="text-[#B04343] text-lg font-bold mb-4"># Topik</div>
-                        <div className="flex flex-wrap gap-2">
-                        {["Finansial", "Teknologi", "Tips & Trick", "Produk", "UMKM", "Kisah Sukses"].map(
-                            (topic, index) => (
-                            <span
-                                key={index}
-                                className="px-4 py-2 bg-white text-black text-sm border border-yellow-500 rounded-full cursor-pointer hover:bg-yellow-100"
-                            >
-                                {topic}
-                            </span>
-                            )
-                        )}
+                            <div className="flex flex-wrap gap-2">
+                                {[
+                                {
+                                    title: "Finansial",
+                                    link: "/finansial",
+                                },
+                                {
+                                    title: "Teknologi",
+                                    link: "/teknologi",
+                                },
+                                {
+                                    title: "Tips & Trick",
+                                    link: "/tips-trick",
+                                },
+                                {
+                                    title: "Product",
+                                    link: "/product",
+                                },
+                                {
+                                    title: "UMKM",
+                                    link: "/umkm",
+                                },
+                                {
+                                    title: "Kisah Sukses",
+                                    link: "/kisah-sukses",
+                                },
+                                ].map((topic, index) => (
+                                <Link to={topic.link} key={index} className="flex">
+                                    <span
+                                    className="px-4 py-2 bg-white text-black text-sm border border-yellow-500 rounded-full cursor-pointer hover:bg-yellow-100"
+                                    >
+                                    {topic.title}
+                                    </span>
+                                </Link>
+                                ))}
+                            </div>
                         </div>
-                    </div>
+
                 </div>
 
                 <div className="mt-12">

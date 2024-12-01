@@ -95,23 +95,45 @@ const App = () => {
             </Link>
           </div>
           
-          <div className="w-1/3">
-            <h2 className="text-lg font-bold"># Topik</h2>
-            <div className="flex flex-wrap gap-2 mt-4">
-              {["Financial", "Teknologi", "Tips & Trick", "Produk", "UMKM", "Kisah Sukses"].map(
-                (topic, index) => (
-                <Link>
-                  <span
-                    key={index}
-                    className="bg-yellow-200 text-yellow-700 px-3 py-1 rounded-full text-sm"
-                  >
-                    {topic}
-                  </span>
-                </Link>
-                )
-              )}
+            <div className="lg:w-1/4">
+                <div className="text-[#B04343] text-lg font-bold mb-4"># Topik</div>
+                <div className="flex flex-wrap gap-2">
+                    {[
+                        {
+                            title: "Finansial",
+                            link: "/finansial",
+                        },
+                        {
+                            title: "Teknologi",
+                            link: "/teknologi",
+                        },
+                        {
+                            title: "Tips & Trick",
+                            link: "/tips-trick",
+                        },
+                        {
+                            title: "Product",
+                            link: "/product",
+                        },
+                        {
+                            title: "UMKM",
+                            link: "/umkm",
+                        },
+                        {
+                            title: "Kisah Sukses",
+                            link: "/kisah-sukses",
+                        },
+                        ].map((topic, index) => (
+                        <Link to={topic.link} key={index} className="flex">
+                            <span
+                                className="px-4 py-2 bg-white text-black text-sm border border-yellow-500 rounded-full cursor-pointer hover:bg-yellow-100"
+                                >
+                                {topic.title}
+                            </span>
+                        </Link>
+                        ))}
+                </div>
             </div>
-          </div>
         </div>
       </div>
 

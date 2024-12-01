@@ -5,7 +5,7 @@ import RegisterPage from "./components/Daftar/Daftar";
 import Login from "./components/Login/Login";
 import Langganan from "./components/Langganan/Langganan";
 import AboutUs from "./components/AboutUs/AboutUs";
-import SubBerita from "./components/Berita/subBerita";
+import SubBerita from "./components/Berita/Finansial";
 import Pembayaran from "./components/Langganan/Pembayaran";
 import SubPembayaran from "./components/Langganan/subPembayaran";
 import SubProgram from "./components/Program/subProgram";
@@ -41,8 +41,12 @@ import StrategiInvestasi from "./components/Program/StrategiInvestasi";
 
 import SubEvent from "./components/Event/SubEvent";
 import IsiEvent1 from "./components/Event/IsiEvent/IsiEvent1";
+import IsiEvent2 from "./components/Event/IsiEvent/IsiEvent2";
+import IsiEvent3 from "./components/Event/IsiEvent/IsiEvent3";
+import IsiEvent4 from "./components/Event/IsiEvent/IsiEvent4";
 
 import IsiBerita from "./components/Berita/IsiBerita";
+import Finansial from "./components/Berita/Finansial";
 import BeritaUtama from "./components/Berita/BeritaUtama";
 
 
@@ -99,8 +103,12 @@ const App = () => {
 
           <Route path="/subEvent" element={<SubEvent />} />
           <Route path="/isiEvent1" element={<IsiEvent1 />} />
+          <Route path="/isiEvent2" element={<IsiEvent2 />} />
+          <Route path="/isiEvent3" element={<IsiEvent3 />} />
+          <Route path="/isiEvent4" element={<IsiEvent4 />} />
 
           <Route path="/isiBerita" element={<IsiBerita />} />
+          <Route path="/finansial" element={<Finansial />} />
           <Route path="/beritaUtama" element={<BeritaUtama />} />
           
         </Routes>
