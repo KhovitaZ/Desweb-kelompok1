@@ -12,7 +12,7 @@ function Langganan() {
             </div>
 
             {/* Deskripsi */}
-            <p className="text-center text-gray-700 mb-10 max-w-2xl px-4">
+            <p className="text-center text-gray-900 mb-10 max-w-2xl px-4">
                 Dapatkan lebih banyak keuntungan dengan berlangganan! Nikmati pembelajaran tanpa batas, sertifikasi, dan akses ke materi terbaru hanya dengan satu klik.
             </p>
 
@@ -21,7 +21,7 @@ function Langganan() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {/* Paket 1 Bulan */}
                     <div className="bg-white shadow-md rounded-lg p-4 sm:p-6 border border-gray-200 flex flex-col justify-between">
-                        <img src="path_to_your_image" alt="Paket 1 Bulan" className="w-full h-32 object-cover rounded-md mb-4" />
+                        <img src="/src/assets/langganan/lgn.jpg" alt="Paket 1 Bulan" className="w-full h-32 object-cover rounded-md mb-4" />
                         <h3 className="text-xl font-bold mb-2">Paket 1 bulan (30 hari)</h3>
                         <ul className="text-gray-600 mb-4 space-y-1">
                             <li>✔ Akses ke semua materi, termasuk materi baru</li>
@@ -38,7 +38,7 @@ function Langganan() {
 
                     {/* Paket 3 Bulan */}
                     <div className="bg-white shadow-md rounded-lg p-4 sm:p-6 border border-gray-200 flex flex-col justify-between">
-                        <img src="path_to_your_image" alt="Paket 3 Bulan" className="w-full h-32 object-cover rounded-md mb-4" />
+                        <img src="/src/assets/langganan/lgn.jpg" alt="Paket 3 Bulan" className="w-full h-32 object-cover rounded-md mb-4" />
                         <h3 className="text-xl font-bold mb-2">Paket 3 bulan (90 hari)</h3>
                         <ul className="text-gray-600 mb-4 space-y-1">
                             <li>✔ Akses ke semua materi, termasuk materi baru</li>
@@ -56,7 +56,7 @@ function Langganan() {
 
                     {/* Paket 6 Bulan */}
                     <div className="bg-white shadow-md rounded-lg p-4 sm:p-6 border border-gray-200 flex flex-col justify-between">
-                        <img src="path_to_your_image" alt="Paket 6 Bulan" className="w-full h-32 object-cover rounded-md mb-4" />
+                        <img src="/src/assets/langganan/lgn.jpg" alt="Paket 6 Bulan" className="w-full h-32 object-cover rounded-md mb-4" />
                         <h3 className="text-xl font-bold mb-2">Paket 6 bulan (180 hari)</h3>
                         <ul className="text-gray-600 mb-4 space-y-1">
                             <li>✔ Akses ke semua materi, termasuk materi baru</li>

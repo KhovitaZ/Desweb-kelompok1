@@ -6,6 +6,7 @@ import Login from "./components/Login/Login";
 import Langganan from "./components/Langganan/Langganan";
 import SubBerita from "./components/Berita/subBerita";
 import Pembayaran from "./components/Langganan/Pembayaran";
+import SubPembayaran from "./components/Langganan/subPembayaran";
 import SubProgram from "./components/Program/subProgram";
 import MarketStrategy from "./components/Program/MarketStrategy";
 import FinancialBenchmarks from "./components/Program/FinancialBenchmarks";
@@ -58,6 +59,7 @@ const App = () => {
           <Route path="/subberita" element={<SubBerita />} />
           <Route path="/langganan" element={<Langganan />} />
           <Route path="/pembayaran" element={<Pembayaran />} />
+          <Route path="/subpembayaran" element={<SubPembayaran />} />
           <Route path="/subprogram" element={<SubProgram />} />
           <Route path="/marketStrategy" element={<MarketStrategy />} />
           <Route path="/financialBenchmarks" element={<FinancialBenchmarks />} />
