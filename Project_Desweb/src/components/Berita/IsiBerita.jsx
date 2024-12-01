@@ -39,15 +39,15 @@ const news = [
 
 function IsiBerita() {
     return (
-        <div className="bg-gray-50 min-h-screen p-4 flex justify-center">
+        <div className="bg-gray-50 dark:bg-gray-900 min-h-screen p-4 flex justify-center">
             <div className="flex flex-col max-w-6xl gap-8">
                 <div className="flex gap-8">
                     <div className="w-2/3">
-                        <h1 className="text-4xl font-bold text-black mb-2">Tips dan Trik: Mengelola Waktu dan Memilih Tim Untuk Startup</h1>
-                        <p className="text-gray-500 text-lg mb-4">Membangun startup yang sukses membutuhkan pengelolaan waktu yang efisien, tim yang solid, serta tips dan trik praktis untuk menghadapi tantangan ini.</p>
+                        <h1 className="text-4xl font-bold text-black dark:text-white mb-2">Tips dan Trik: Mengelola Waktu dan Memilih Tim Untuk Startup</h1>
+                        <p className="text-gray-500 dark:text-gray-400 text-lg mb-4">Membangun startup yang sukses membutuhkan pengelolaan waktu yang efisien, tim yang solid, serta tips dan trik praktis untuk menghadapi tantangan ini.</p>
                         
                         <div className='flex flex-row justify-between'>
-                            <div className="flex items-center gap-4 mb-6 text-black">
+                            <div className="flex items-center gap-4 mb-6 text-black dark:text-gray-200">
                                 <img
                                     src={people1} />
                                 <div>
@@ -55,17 +55,17 @@ function IsiBerita() {
                                     <p className='font-bold text-[16px]'>Hermanus Johan</p>
                                     <p className='font-normal text-[16px]'> -  Startup Academy</p>
                                     </div>
-                                    <p className='text-[#868686] text-[13px]'>Jumat, 15 November 2024</p>
+                                    <p className='text-[#868686] text-[13px] dark:text-gray-400'>Jumat, 15 November 2024</p>
                                 </div>
                             </div>
 
                             <div className="flex items-center gap-3 mb-6">
-                                <p className="text-gray-700">Share</p>
-                                <div className="flex gap-4 text-xl text-gray-600">
+                                <p className="text-gray-700 dark:text-gray-300">Share</p>
+                                <div className="flex gap-4 text-xl text-gray-600 dark:text-gray-400">
                                     <FaFacebookF className="text-[#395186] cursor-pointer" />
                                     <FaWhatsapp className="text-green-500 cursor-pointer" />
                                     <FaTelegramPlane className="text-blue-500 cursor-pointer" />
-                                    <FaLink className="text-gray-800 cursor-pointer" />
+                                    <FaLink className="text-gray-800 dark:text-gray-300 cursor-pointer" />
                                 </div>
                             </div>
                         </div>
@@ -78,7 +78,7 @@ function IsiBerita() {
                             />
                         </div>
 
-                    <div className="text-gray-800 leading-relaxed">
+                    <div className="text-gray-800 dark:text-gray-300 leading-relaxed">
                         <p className="font-semibold text-lg mb-4">
                             Startup Academy - Mengelola waktu dan memilih tim yang tepat merupakan fondasi penting bagi kesuksesan sebuah startup.
                         </p>
@@ -139,25 +139,23 @@ function IsiBerita() {
                                 ].map((topic, index) => (
                                 <Link to={topic.link} key={index} className="flex">
                                     <span
-                                    className="px-4 py-2 bg-white text-black text-sm border border-yellow-500 rounded-full cursor-pointer hover:bg-yellow-100"
-                                    >
+                                    className="px-4 py-2 bg-white dark:bg-gray-800 text-black dark:text-gray-300 text-sm border border-yellow-500 rounded-full cursor-pointer hover:bg-yellow-100 dark:hover:bg-gray-700">
                                     {topic.title}
                                     </span>
                                 </Link>
                                 ))}
                             </div>
                         </div>
-
-                </div>
+                    </div>
 
                 <div className="mt-12">
-                    <h2 className="text-2xl font-medium text-black mb-4">Artikel Terkait</h2>
+                    <h2 className="text-2xl font-medium text-black dark:text-white mb-4">Artikel Terkait</h2>
                     <div className="grid grid-cols-5 gap-4">
                         {news.map((item, index) => (
                         <Link to={item.link}>
                             <div key={index}>
                                 <img src={item.img} className="w-full h-32 object-cover rounded-lg"/>
-                                <p className="p-4 text-black font-semibold">{item.title}</p>
+                                <p className="p-4 text-black dark:text-white font-semibold">{item.title}</p>
                             </div>
                         </Link>
                         ))}
