@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 const Finansial = () => {
   return (
-    <div className="bg-white p-4 md:p-8 lg:px-16 flex flex-col lg:flex-row gap-8">
+    <div className="bg-white dark:bg-gray-900 dark:text-gray-100 p-4 md:p-8 lg:px-16 flex flex-col lg:flex-row gap-8">
       {/* Konten Kiri */}
       <div className="lg:w-3/4">
         {/* Header */}

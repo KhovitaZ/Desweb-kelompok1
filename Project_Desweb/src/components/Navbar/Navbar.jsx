@@ -7,7 +7,7 @@ import DarkMode from "./DarkMode";
 
 const Navbar = () => {
   return (
-    <div className="dark:text[] fixed h-[75px] md:h-[75px] lg:h-[84px] w-full bg-[#55B0F1] flex flex-row justify-between items-center top-0 z-40">
+    <div className="dark:text[] fixed h-[75px] md:h-[75px] lg:h-[84px] w-full bg-[#55B0F1] dark:bg-gray-700 flex flex-row justify-between items-center top-0 z-40">
       <div className="flex flex-row justify-start items-center">
         <div className="w-[70px] md:w-[100px] lg:w-[150px]">
           <img src={Logo}/>

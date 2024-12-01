@@ -1,6 +1,5 @@
 import React from "react";
 import Img1 from "../../assets/program/marketStrategy/targetAudience.svg";
-import bg from "../../assets/program/bg-dark.svg";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import { Link } from "react-router-dom";
@@ -78,7 +77,7 @@ const TargetAudience= () => {
               </div>
             </div>
 
-            <div style={{ backgroundImage: `url(${bg})` }}
+            <div
                 className="bg-cover bg-center mx-5 sm:mx-20 my-5 sm:my-10 p-4 sm:p-10 rounded-[10px]">
                   <h3 className="font-bold text-[#4E4E4E] dark:text-white text-[20px] mb-4">Topik yang akan dibahas</h3>
                   
