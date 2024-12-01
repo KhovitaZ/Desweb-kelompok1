@@ -53,7 +53,7 @@ const Berita = () => {
         </div>
         {/* Body Section */}
         <div className="flex flex-col gap-4">
-          <Link to="/SubBerita">
+          <Link to="/beritaUtama">
             <div className="flex justify-end font-bold gap-2">
               <p>Lihat Selengkapnya</p>
               <img src={iconPanah} alt="Arrow" />
