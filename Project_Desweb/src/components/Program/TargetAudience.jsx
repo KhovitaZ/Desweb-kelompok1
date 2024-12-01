@@ -86,10 +86,10 @@ const TargetAudience= () => {
                     <table className="w-full border-collapse">
                       {/* Table Header */}
                       <thead>
-                        <tr className="bg-[#C3E6FD] dark:bg-gray-700 text-left">
-                          <th className="p-2 sm:p-4 text-sm font-bold text-gray-700">Topik</th>
-                          <th className="p-2 sm:p-4 text-sm font-bold text-gray-700">Materi</th>
-                          <th className="p-2 sm:p-4 text-sm font-bold text-gray-700">Durasi</th>
+                        <tr className="bg-[#C3E6FD] dark:bg-gray-800 text-left">
+                          <th className="p-2 sm:p-4 text-sm font-bold text-gray-700 dark:text-white">Topik</th>
+                          <th className="p-2 sm:p-4 text-sm font-bold text-gray-700 dark:text-white">Materi</th>
+                          <th className="p-2 sm:p-4 text-sm font-bold text-gray-700 dark:text-white">Durasi</th>
                         </tr>
                       </thead>
 
@@ -99,14 +99,16 @@ const TargetAudience= () => {
                           <tr
                             key={index}
                             className={`${
-                              index % 2 === 0 ? "bg-[#F9FAFB]" : "bg-white"
-                            } hover:bg-[#F1F5F9] transition`}
+                              index % 2 === 0 
+                              ? "bg-[#F9FAFB] dark:bg-gray-900" 
+                              : "bg-white dark:bg-gray-900"
+                            } hover:bg-[#F1F5F9] dark:hover:bg-gray-800 transition`}
                           >
                             <Link>
-                            <td className="p-2 sm:p-4 text-[10px] sm:text-sm text-gray-800">{item.title}</td>
+                            <td className="p-2 sm:p-4 text-[10px] sm:text-sm text-gray-800 dark:text-white">{item.title}</td>
                             </Link>
-                            <td className="p-2 sm:p-4 text-[10px] sm:text-sm text-gray-600">{item.materi}</td>
-                            <td className="p-2 sm:p-4 text-[10px] sm:text-sm text-gray-600">{item.durasi}</td>
+                            <td className="p-2 sm:p-4 text-[10px] sm:text-sm text-gray-600 dark:text-white">{item.materi}</td>
+                            <td className="p-2 sm:p-4 text-[10px] sm:text-sm text-gray-600 dark:text-white">{item.durasi}</td>
                           </tr>
                         ))}
                       </tbody>
@@ -117,9 +119,9 @@ const TargetAudience= () => {
                     <table className="w-full border-collapse">
                       {/* Table Header */}
                       <thead>
-                        <tr className="bg-[#C3E6FD] text-left">
-                          <th className="p-2 sm:p-4 text-sm font-bold text-gray-700">Ujian</th>
-                          <th className="p-2 sm:p-4 text-sm font-bold text-gray-700">Durasi</th>
+                        <tr className="bg-[#C3E6FD] dark:bg-gray-800 text-left">
+                          <th className="p-2 sm:p-4 text-sm font-bold text-gray-700 dark:text-white">Ujian</th>
+                          <th className="p-2 sm:p-4 text-sm font-bold text-gray-700 dark:text-white">Durasi</th>
                         </tr>
                       </thead>
 
@@ -129,13 +131,15 @@ const TargetAudience= () => {
                           <tr
                             key={index}
                             className={`${
-                              index % 2 === 0 ? "bg-[#F9FAFB]" : "bg-white"
-                            } hover:bg-[#F1F5F9] transition`}
+                              index % 2 === 0 
+                              ? "bg-[#F9FAFB] dark:bg-gray-900" 
+                              : "bg-white dark:bg-gray-900"
+                            } hover:bg-[#F1F5F9] dark:hover:bg-gray-800 transition`}
                           >
                             <Link>
-                            <td className="p-2 sm:p-4 text-[10px] sm:text-sm text-gray-800">{item.title}</td>
+                            <td className="p-2 sm:p-4 text-[10px] sm:text-sm text-gray-800 dark:text-white">{item.title}</td>
                             </Link>
-                            <td className="p-2 sm:p-4 text-[10px] sm:text-sm text-gray-600">{item.durasi}</td>
+                            <td className="p-2 sm:p-4 text-[10px] sm:text-sm text-gray-600 dark:text-white">{item.durasi}</td>
                           </tr>
                         ))}
                       </tbody>

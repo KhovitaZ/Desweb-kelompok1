@@ -1,6 +1,6 @@
 import React from "react";
 import Img1 from "../../assets/program/financialBenchmarks/financialForecasting.svg";
-import bg from "../../assets/program/bg-blue.svg";
+import bg from "../../assets/program/bg-dark.svg";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import { Link } from "react-router-dom";
@@ -99,8 +99,10 @@ const TargetAudience= () => {
                           <tr
                             key={index}
                             className={`${
-                              index % 2 === 0 ? "bg-[#F9FAFB]" : "bg-white"
-                            } hover:bg-[#F1F5F9] transition`}
+                              index % 2 === 0 
+                              ? "bg-[#F9FAFB] dark:bg-gray-900" 
+                              : "bg-white dark:bg-gray-900"
+                            } hover:bg-[#F1F5F9] dark:hover:bg-gray-800 transition`}
                           >
                             <Link>
                             <td className="p-2 sm:p-4 text-[10px] sm:text-sm text-gray-800">{item.title}</td>
@@ -129,8 +131,10 @@ const TargetAudience= () => {
                           <tr
                             key={index}
                             className={`${
-                              index % 2 === 0 ? "bg-[#F9FAFB]" : "bg-white"
-                            } hover:bg-[#F1F5F9] transition`}
+                              index % 2 === 0 
+                              ? "bg-[#F9FAFB] dark:bg-gray-900" 
+                              : "bg-white dark:bg-gray-900"
+                            } hover:bg-[#F1F5F9] dark:hover:bg-gray-800 transition`}
                           >
                             <Link>
                             <td className="p-2 sm:p-4 text-[10px] sm:text-sm text-gray-800">{item.title}</td>
