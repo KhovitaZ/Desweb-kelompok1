@@ -1,8 +1,9 @@
 import React from "react";
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const SubPembayaran = () => {
     const location = useLocation();
+    const navigate = useNavigate();
   
     const { paymentMethod } = location.state || {};
   
@@ -61,7 +62,7 @@ const SubPembayaran = () => {
                     <p className="text-xl font-bold text-red-600">{selectedPayment.bankName}</p>
                 </div>
                 <div className="border-t border-gray-300 my-2"></div>
-                <div className="text-sm text-gray-700 mb-4">
+                <div className="text-sm text-gray-700 mb-4 text-center">
                     <p>Bayar dalam <span className="font-semibold">23:59:48</span></p>
                 </div>
                 <div className="bg-gray-100 p-4 rounded-lg">
@@ -87,7 +88,9 @@ const SubPembayaran = () => {
                         <p className="text-sm mt-2 text-gray-600"> Masukkan nomor virtual account ke dalam aplikasi pembayaran Anda dan selesaikan transaksi.</p>
                     </details>
                 </div>
-                <button className="w-full mt-4 bg-black text-white py-2 rounded-lg font-medium">OK</button>
+                <button className="w-full mt-4 bg-black text-white py-2 rounded-lg font-medium" onClick={() => navigate('/langganan')}>
+                    OK
+                </button>
             </div>
         </div>
     );
