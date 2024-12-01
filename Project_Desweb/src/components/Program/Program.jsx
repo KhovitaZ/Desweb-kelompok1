@@ -34,19 +34,19 @@ const ProgramData = [
 
 const Program = () => {
   return (
-    <div id="program" className="mt-14 mb-12 bg-gradient-to-b from-[#EEEEEE] via-[#D4EDFF] to-[#87CCFF] dark:from-gray-900 dark:via-[#182136] dark:to-[#202d4a]">
+    <div id="program" className="mt-14 mb-12 bg-gradient-to-b from-[#EEEEEE] via-[#D4EDFF] to-[#87CCFF] dark:bg-gradient-to-b dark:from-gray-900 dark:via-gray-800 dark:to-gray-700">
       <div className="container mx-auto px-4 lg:px-10 pt-[52px]">
-        {/* Header section */}
+        {/* Header */}
         <div className="text-center mb-10 max-w-[600px] mx-auto">
           <h1
             data-aos="fade-up"
-            className="text-[24px] md:text-[30px] lg:text-[37px] font-bold"
+            className="text-[24px] md:text-[30px] lg:text-[37px] text-gray-900 dark:text-gray-100 font-bold "
           >
             Program Pembelajaran
           </h1>
           <p
             data-aos="fade-up"
-            className="text-[14px] md:text-[16px] font-light"
+            className="text-[14px] md:text-[16px] text-gray-600 dark:text-gray-400 font-light"
           >
             Pelajari lebih mendalam tentang aspek-aspek penting dalam membangun dan mengembangkan startup.
           </p>
@@ -55,7 +55,7 @@ const Program = () => {
         {/* Body section */}
         <div className="flex flex-col gap-4">
           <Link to="/subProgram">
-            <div className="flex justify-end font-bold gap-2">
+            <div className="flex justify-end font-bold gap-2 text-gray-800 dark:text-gray-100">
               <p>Lihat Selengkapnya</p>
               <img src={iconPanah} alt="Icon Panah" />
             </div>
@@ -68,8 +68,7 @@ const Program = () => {
                 data-aos="fade-up"
                 data-aos-delay={data.aosDelay}
                 key={data.id}
-                className="flex flex-col w-full h-auto border-[#E7E7E7] border-2 rounded-[20px] p-5 bg-white"
-              >
+                className="flex flex-col w-full h-auto border-[#E7E7E7] border-2 rounded-[20px] p-5 bg-white dark:bg-gray-800">
                 <img
                   src={data.img}
                   alt={data.title}
@@ -77,17 +76,17 @@ const Program = () => {
                 />
                 <div className="flex flex-col justify-between gap-5 mt-4">
                   <div>
-                    <h3 className="text-[18px] md:text-[21px] font-bold">
+                    <h3 className="text-[18px] md:text-[21px] text-gray-900 dark:text-gray-100 font-bold">
                       {data.title}
                     </h3>
-                    <p className="text-[12px] md:text-[14px] font-light text-gray-600">
+                    <p className="text-[12px] md:text-[14px] font-light text-gray-600 dark:text-gray-400">
                       {data.Deskription}
                     </p>
                   </div>
                   <div className="flex items-center">
-                    <button className="w-full md:w-[192px] h-[40px] rounded-[30px] border-[#55B0F1] border-2 hover:bg-[#55B0F1] transition">
+                    <button className="w-full md:w-[192px] h-[40px] rounded-[30px] border-[#55B0F1] dark:border-[#4298D9] border-2 hover:bg-[#55B0F1] dark:hover:bg-[#4298D9] transition">
                       <Link to={data.link}>
-                        <p className="text-[12px] font-medium text-center">
+                        <p className="text-[12px] font-medium text-center text-gray-900 dark:text-gray-100">
                           Lihat selengkapnya
                         </p>
                       </Link>
@@ -100,7 +99,6 @@ const Program = () => {
         </div>
       </div>
     </div>
-
   );
 };
 
