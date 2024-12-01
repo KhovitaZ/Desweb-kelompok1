@@ -53,42 +53,42 @@ const SubPembayaran = () => {
     const selectedPayment = paymentDetails[paymentMethod] || {};
     
     return (
-        <div className="flex justify-center items-center h-screen bg-gray-100 px-4 sm:px-8">
-            <div className="w-full max-w-md bg-white rounded-lg shadow-lg p-6">
-                <h2 className="text-lg font-semibold mb-2">Pembayaran</h2>
-                <div className="border-t border-gray-300 my-2"></div>
+        <div className="flex justify-center items-center h-screen bg-gray-100 dark:bg-gray-800 px-4 sm:px-8">
+            <div className="w-full max-w-md bg-white dark:bg-gray-700 rounded-lg shadow-lg p-6">
+                <h2 className="text-lg font-semibold mb-2 dark:text-gray-100">Pembayaran</h2>
+                <div className="border-t border-gray-300 dark:border-gray-600 my-2"></div>
                 <div className="mb-4">
-                    <p className="text-sm font-medium">Metode Pembayaran</p>
+                    <p className="text-sm font-medium dark:text-gray-200">Metode Pembayaran</p>
                     <p className="text-xl font-bold text-red-600">{selectedPayment.bankName}</p>
                 </div>
-                <div className="border-t border-gray-300 my-2"></div>
-                <div className="text-sm text-gray-700 mb-4 text-center">
+                <div className="border-t border-gray-300 dark:border-gray-600 my-2"></div>
+                <div className="text-sm text-gray-700 dark:text-gray-300 mb-4 text-center">
                     <p>Bayar dalam <span className="font-semibold">23:59:48</span></p>
                 </div>
-                <div className="bg-gray-100 p-4 rounded-lg">
+                <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg">
                 <div className="flex items-center mb-2">
                     {selectedPayment.image && (
                         <img src={selectedPayment.image} alt={selectedPayment.bankName} className="h-6 sm:h-8 w-auto mr-2 object-contain"/>
                     )}
-                    <p className="font-medium">{selectedPayment.bankName}</p>
+                    <p className="font-medium dark:text-gray-200">{selectedPayment.bankName}</p>
                 </div>
                 <div className="text-sm">
-                    <p className="mb-2">Nomor Virtual Account</p>
-                    <div className="flex items-center justify-between bg-gray-200 p-2 rounded-lg overflow-x-auto">
+                    <p className="mb-2 dark:text-gray-200">Nomor Virtual Account</p>
+                    <div className="flex items-center justify-between bg-gray-200 dark:bg-gray-900 p-2 rounded-lg overflow-x-auto">
                         <p className="font-mono text-lg text-red-600">{selectedPayment.vaNumber}</p>
-                        <button className="text-blue-500 font-medium hover:underline text-sm sm:text-base" onClick={() =>
+                        <button className="text-blue-500 dark:text-blue-300 font-medium hover:underline text-sm sm:text-base" onClick={() =>
                         navigator.clipboard.writeText(selectedPayment.vaNumber) } >Salin </button>
                     </div>
                 </div>
-                <p className="text-sm mt-4"> Lakukan pembayaran dari rekening ke nomor virtual account di atas. </p>
+                <p className="text-sm mt-4 dark:text-gray-300"> Lakukan pembayaran dari rekening ke nomor virtual account di atas. </p>
             </div>
                 <div className="mt-4">
-                    <details className="bg-gray-200 p-2 rounded-lg text-sm sm:text-base">
-                        <summary className="font-medium cursor-pointer">Petunjuk Pembayaran </summary>
-                        <p className="text-sm mt-2 text-gray-600"> Masukkan nomor virtual account ke dalam aplikasi pembayaran Anda dan selesaikan transaksi.</p>
+                    <details className="bg-gray-200 dark:bg-gray-900 p-2 rounded-lg text-sm sm:text-base">
+                        <summary className="font-medium cursor-pointer dark:text-gray-200">Petunjuk Pembayaran </summary>
+                        <p className="text-sm mt-2 text-gray-600 dark:text-gray-400"> Masukkan nomor virtual account ke dalam aplikasi pembayaran Anda dan selesaikan transaksi.</p>
                     </details>
                 </div>
-                <button className="w-full mt-4 bg-black text-white py-2 rounded-lg font-medium" onClick={() => navigate('/langganan')}>
+                <button className="w-full mt-4 bg-black text-white dark:bg-gray-900 py-2 rounded-lg font-medium" onClick={() => navigate('/langganan')}>
                     OK
                 </button>
             </div>
