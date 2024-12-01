@@ -1,101 +1,126 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
-const subBerita = () => {
-const beritaItems = [
-    {
-        title: "Peluncuran Fitur Baru di Startup Academy",
-        description: "Dengan bangga kami meluncurkan fitur terbaru di Startup Academy untuk membantu membuat rencana bisnis yang terperinci dan lebih mendalam.",
-        link: "#",
-    },
-    {
-        title: "Workshop Eksklusif: Strategi Pitching untuk Mendapatkan Pendanaan",
-        description: "Workshop eksklusif strategi pitching untuk mendapatkan pendanaan akan dipandu oleh para mentor yang telah berpengalaman.",
-        link: "#",
-    },
-    {
-        title: "Tips dan Trik: Mengelola Waktu dan Memilih Tim Untuk Startup",
-        description: "Startup Academy memberikan panduan mengenai cara memilih tim yang tepat untuk membangun sebuah startup.",
-        link: "#",
-    },
-    {
-        title: "Startup Academy: Membangun Bisnis yang Berkelanjutan",
-        description: "Startup Academy memberikan solusi mengenal cara membangun bisnis yang berkelanjutan.",
-        link: "#",
-    },
-    {
-        title: "Sukses Cerita: Alumni Startup Academy Raih Prestasi",
-        description: "Artikel ini menampilkan kisah sukses alumni Startup Academy yang telah berhasil membangun bisnis startupnya. Kisah ini diharapkan dapat menginspirasi para calon entrepreneur.",
-        link: "#",
-    },
-    {
-        title: "Wonderful Startup Academy, Ajang Pencarian Unicorn Baru Sektor Pariwisata",
-        description: "Wonderful Startup Academy memiliki durasi program yang singkat, padat, serta efektif yang terdiri dari tiga tahap...",
-        link: "#",
-    },
-    {
-        title: "Kolaborasi Startup Academy dengan Universitas",
-        description: "Artikel yang mengulas kolaborasi antara startup academy dengan institusi pendidikan tinggi untuk menyediakan pelatihan praktis bagi mahasiswa dan memperkenalkan mereka pada dunia kewirausahaan.",
-        link: "#",
-    },
-    {
-        title: "Program Pelatihan Gratis dari Startup Academy untuk UMKM",
-        description: "Berita tentang program-program yang menawarkan pelatihan gratis atau bersubsidi kepada UMKM untuk meningkatkan keterampilan digital dan mengembangkan usaha.",
-        link: "#",
-    },
-    {
-        title: "Peran Startup Academy dalam Meningkatkan Keterampilan Teknologi",
-        description: "Topik yang mengeksplorasi bagaimana startup academy membantu meningkatkan keterampilan teknologi dan kewirausahaan.",
-        link: "#",
-    },
-    {
-        title: "Startup Academy: Membuka Peluang Internasional",
-        description: "Artikel yang menampilkan bagaimana startup academy membantu entrepreneur mengakses peluang internasional.",
-        link: "#",
-    },
-    {
-        title: "Menghadapi Tantangan: Membuat Entrepreneur yang Sukses",
-        description: "Artikel yang mengeksplorasi tantangan yang dihadapi startup academy dalam membuat entrepreneur yang sukses.",
-        link: "#",
-    },
-    {
-        title: "Dampak Ekonomi: Bagaimana Startup Academy Meningkatkan Ekonomi Lokal",
-        description: "Artikel yang mengeksplorasi bagaimana startup academy berdampak pada ekonomi lokal.",
-        link: "#",
-    },
-    {
-        title: "Adaptasi Pasca Pandemi: Bagaimana Startup Academy Beradaptasi",
-        description: "Artikel yang menampilkan bagaimana startup academy beradaptasi dengan situasi pasca pandemi.",
-        link: "#",
-    },
-    {
-        title: "Peran Pemerintah dalam Mendukung Startup Academy",
-        description: "Artikel yang mengeksplorasi bagaimana pemerintah dapat mendukung startup academy.",
-        link: "#",
-    },
-    {
-        title: "Masa Depan Startup dan Ekonomi Digital",
-        description: "Artikel yang mengeksplorasi bagaimana startup academy dapat membantu meningkatkan inovasi di ekonomi digital.",
-        link: "#",
-    },
-];
+const Berita = () => {
+  return (
+    <div className="bg-white p-4 md:p-8 lg:px-16 flex flex-col lg:flex-row gap-8">
+      {/* Konten Kiri */}
+      <div className="lg:w-3/4">
+        {/* Header */}
+        <div className="text-yellow-500 text-2xl font-bold mb-4">Finansial</div>
 
-return (
-    <div className="container mx-auto p-4 pt-6 md:p-6 lg:p-12">
-        <h1 className="text-3xl font-bold text-[#5F5F5F] text-center mb-20">Dapatkan berita menarik terkait startup</h1>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {beritaItems.map((item, index) => (
-    <div key={index} className="bg-[#E0F3FF] border border-[#55B0F1] shadow-md rounded-lg p-6 relative min-h-[200px]">
-        <h2 className="text-lg font-bold">{item.title}</h2>
-            <hr className="border-t border-[#B6B6B6] my-2" />
-                <p className="text-gray-600 font-poppins">{item.description}</p>
-                    <div className="absolute bottom-2 right-2 px-2 py-0.5 border border-gray-400 rounded-md bg-transparent">
-                        <a href={item.link} className="text-black text-xs font-poppins hover:underline">Baca Selengkapnya</a>
-                    </div>
-                </div>
-            ))}
+        {/* Highlighted Article */}
+        <div className="mb-8">
+          <img
+            src="https://via.placeholder.com/831x388" // Ganti dengan URL gambar artikel utama
+            alt="Artikel Utama"
+            className="w-full rounded-md mb-4"
+          />
+          <p className="text-sm text-gray-500 mb-2">8 jam yang lalu</p>
+          <Link to="/isiBerita"><h2 className="text-xl font-bold">
+            Tips dan Trik: Mengelola Waktu dan Memilih Tim Untuk Startup
+          </h2>
+          <p className="text-gray-600 mt-2">
+            Membangun startup yang sukses membutuhkan pengelolaan waktu yang
+            efisien, tim yang solid, serta tips dan trik praktis untuk
+            menghadapi tantangan ini.
+          </p>
+          </Link>
         </div>
+
+        {/* Divider */}
+        <hr className="border-gray-300 mb-8" />
+
+        {/* List of Articles */}
+        <div className="grid gap-6">
+          {[
+            {
+              title: "Panduan Mengelola Arus Kas Startup agar Tetap Sehat",
+              time: "8 jam yang lalu",
+              category: "Finansial",
+              description:
+                "Panduan strategis mengelola arus kas startup mencakup perencanaan keuangan, pengendalian biaya, pemantauan pendapatan, dan menjaga likuiditas bisnis.",
+              image: "https://via.placeholder.com/200x120", // Ganti URL gambar
+            },
+            {
+              title: "Pentingnya Financial KPI untuk Mengukur Keberhasilan Startup",
+              time: "8 jam yang lalu",
+              category: "Finansial",
+              description:
+                "Memahami kinerja keuangan, mengevaluasi keberhasilan, mengoptimalkan strategi bisnis, dan menarik perhatian investor.",
+              image: "https://via.placeholder.com/200x120",
+            },
+            {
+              title: "Mengenal Revenue Model yang Cocok untuk Startup Baru Anda",
+              time: "8 jam yang lalu",
+              category: "Finansial",
+              description:
+                "Berbagai revenue model seperti subscription, freemium, dan licensing untuk menemukan strategi pendapatan terbaik bagi startup Anda.",
+              image: "https://via.placeholder.com/200x120",
+            },
+            {
+                title: "Bagaimana Startup Bisa Bertahan di Tengah Ketidakpastiaan Ekonomi",
+                time: "9 jam yang lalu",
+                category: "Finansial",
+                description:
+                  "Strategi bertahan startup: kelola arus kas, adaptasi cepat, inovasi produk, efisiensi biaya dan fokus kebutuhan pasar.",
+                image: "https://via.placeholder.com/200x120",
+            },
+            {
+                title: "Tantangan yang Dihadapi Startup dalam Mencetak Pengusaha Sukses",
+                time: "9 jam yang lalu",
+                category: "Finansial",
+                description:
+                  "Menghadapi tantangan dalam pembiayaan, pengelolaan arus kas, adaptasi pasar, dan membangun tim yang solid untuk sukses.",
+                image: "https://via.placeholder.com/200x120",
+            },
+            {
+                title: "Pahami Kunci Kesuksesan Startup Melalui Startup Academy",
+                time: "9 jam yang lalu",
+                category: "Finansial",
+                description:
+                  "Strategi sukses startup melalui Startup Academy, dengan fokus pada finansial, perencanaan, inovasi, dan pengembangan bisnis yang efektif.",
+                image: "https://via.placeholder.com/200x120",
+            },
+
+          ].map((article, index) => (
+            <div key={index} className="flex gap-4">
+              <img
+                src={article.image}
+                alt={article.title}
+                className="w-32 h-20 rounded-md object-cover"
+              />
+              <div>
+                <p className="text-yellow-500 text-sm">{article.category}</p>
+                <p className="text-gray-500 text-xs">{article.time}</p>
+                <h3 className="text-md font-semibold mt-1">{article.title}</h3>
+                <p className="text-gray-600 text-sm mt-1">
+                  {article.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Sidebar Kanan */}
+      <div className="lg:w-1/4">
+        <div className="text-[#B04343] text-lg font-bold mb-4"># Topik</div>
+        <div className="flex flex-wrap gap-2">
+          {["Finansial", "Teknologi", "Tips & Trick", "Produk", "UMKM", "Kisah Sukses"].map(
+            (topic, index) => (
+              <span
+                key={index}
+                className="px-4 py-2 bg-white text-black text-sm border border-yellow-500 rounded-full cursor-pointer hover:bg-yellow-100"
+              >
+                {topic}
+              </span>
+            )
+          )}
+        </div>
+      </div>
     </div>
-);
+  );
 };
 
-export default subBerita;
+export default Berita;

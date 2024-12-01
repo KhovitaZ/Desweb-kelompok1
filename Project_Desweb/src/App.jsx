@@ -41,6 +41,10 @@ import StrategiInvestasi from "./components/Program/StrategiInvestasi";
 import SubEvent from "./components/Event/SubEvent";
 import IsiEvent1 from "./components/Event/IsiEvent/IsiEvent1";
 
+import IsiBerita from "./components/Berita/IsiBerita";
+import BeritaUtama from "./components/Berita/BeritaUtama";
+
+
 
 const App = () => {
   const [orderPopup, setOrderPopup] = React.useState(false);
@@ -93,6 +97,9 @@ const App = () => {
 
           <Route path="/subEvent" element={<SubEvent />} />
           <Route path="/isiEvent1" element={<IsiEvent1 />} />
+
+          <Route path="/isiBerita" element={<IsiBerita />} />
+          <Route path="/beritaUtama" element={<BeritaUtama />} />
           
         </Routes>
       </div>
