@@ -1,6 +1,6 @@
 import React from "react";
 import Img1 from "../../assets/program/marketStrategy/targetAudience.svg";
-import bg from "../../assets/program/bg-blue.svg";
+import bg from "../../assets/program/bg-dark.svg";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import { Link } from "react-router-dom";
@@ -65,7 +65,7 @@ const TargetAudience= () => {
         <div id="program" className="h-[703px] mt-[75px] mb-12">
           <Navbar />
           <div>
-            <div className="w-full bg-[#A2DBFF] flex flex-row justify-start items-center h-[70px] sm:h-[120px] md:h-[150px] p-5 gap-2">
+            <div className="w-full bg-[#A2DBFF] dark:bg-gray-700 flex flex-row justify-start items-center h-[70px] sm:h-[120px] md:h-[150px] p-5 gap-2">
               <div className="flex flex-row justify-start items-center gap-3 lg:gap-8 mb-3 sm:mb-0">
                 <img src={Img1} className="w-[40px] sm:w-[80px] md:w-[100px] lg:w-[120px]" />
                 <div className="flex flex-col">
@@ -80,13 +80,13 @@ const TargetAudience= () => {
 
             <div style={{ backgroundImage: `url(${bg})` }}
                 className="bg-cover bg-center mx-5 sm:mx-20 my-5 sm:my-10 p-4 sm:p-10 rounded-[10px]">
-                  <h3 className="font-bold text-[#4E4E4E] text-[20px] mb-4">Topik yang akan dibahas</h3>
+                  <h3 className="font-bold text-[#4E4E4E] dark:text-white text-[20px] mb-4">Topik yang akan dibahas</h3>
                   
                   <div className="overflow-x-auto mb-10">
                     <table className="w-full border-collapse">
                       {/* Table Header */}
                       <thead>
-                        <tr className="bg-[#C3E6FD] text-left">
+                        <tr className="bg-[#C3E6FD] dark:bg-gray-700 text-left">
                           <th className="p-2 sm:p-4 text-sm font-bold text-gray-700">Topik</th>
                           <th className="p-2 sm:p-4 text-sm font-bold text-gray-700">Materi</th>
                           <th className="p-2 sm:p-4 text-sm font-bold text-gray-700">Durasi</th>

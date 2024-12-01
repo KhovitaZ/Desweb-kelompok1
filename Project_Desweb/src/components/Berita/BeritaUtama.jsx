@@ -9,6 +9,7 @@ import berita6 from "../../assets/berita/berita6.svg";
 import berita7 from "../../assets/berita/berita7.svg";
 import berita8 from "../../assets/berita/berita8.svg";
 import berita9 from "../../assets/berita/berita9.svg";
+import Navbar from "../Navbar/Navbar";
 import { Link } from "react-router-dom";
 
 const App = () => {
@@ -77,7 +78,8 @@ const App = () => {
   return (
     <div>
       {/* Hero Section */}
-      <div className="bg-gray-100 p-8">
+      <Navbar />
+      <div className="bg-gray-100 p-8 mt-20">
         <h1 className="text-gray-700 text-center text-lg mb-6">
           Dapatkan berita menarik terkait startup
         </h1>

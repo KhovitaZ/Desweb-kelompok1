@@ -57,7 +57,7 @@ const FinancialBenchmarks = () => {
     <div id="program" className="h-[703px] mt-28 mb-12">
       <Navbar />
       <div className="flex flex-col mx-8 sm:mx-20 my-10 gap-10">
-        <div className="grid-cols-1 sm:grid sm:grid-cols-[minmax(100px,_1fr)_1fr] items-center bg-[#A2DBFF] rounded-[20px] h-[169px] p-5 gap-2">
+        <div className="grid-cols-1 sm:grid sm:grid-cols-[minmax(100px,_1fr)_1fr] items-center bg-[#A2DBFF] dark:bg-gray-700 rounded-[20px] h-[169px] p-5 gap-2">
           <div className="flex flex-row justify-start items-center gap-3 lg:gap-8 mb-3 sm:mb-0">
             <img src={ImgLogo} className="w-[60px] sm:w-[80px] md:w-[100px] lg:w-[120px]" />
             <p className="font-bold text-[10px] sm:text-[18px] lg:text-[26px]">Financial Benchmarks & Planning</p>
@@ -78,7 +78,7 @@ const FinancialBenchmarks = () => {
           </label>
         </div>
 
-        <div className="flex flex-col bg-[#E0F3FF] h-[220px] md:h-[230px] lg:h-[200px] xl:h-[160px] p-5 gap-3">
+        <div className="flex flex-col bg-[#E0F3FF] dark:bg-gray-900 h-[220px] md:h-[230px] lg:h-[200px] xl:h-[160px] p-5 gap-3">
           <p className="text-[26px] font-bold">Deskripsi</p>
           <p className="text-justify leading-tight text-[10px] sm:text-[14px] md:text-[16px]">Financial Benchmarks & Planning mencakup pemahaman dasar keuangan, perencanaan finansial startup, kesiapan pendanaan, model pendapatan, dan financial forecasting serta KPI. Materi ini membantu startup mengelola keuangan secara efektif, mempersiapkan investasi, memproyeksikan pendapatan, dan menilai kinerja keuangan untuk memastikan pertumbuhan dan keberlanjutan bisnis.</p>
         </div>
@@ -88,7 +88,7 @@ const FinancialBenchmarks = () => {
             {ProgramData.map((data) => (
               <Link to={data.link}>
                   <div className="grid sm:grid-cols-2 gap-6 sm:w-[1000px] md:w-[590px] md:h-[170px] lg:w-[580px] xl:w-[680px] xl:h-[150px]">
-                    <div className="flex items-center gap-4 p-4 bg-white rounded-lg shadow-md">
+                    <div className="flex items-center gap-4 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
                       <img
                         src={data.img}
                         alt="Basic Financial Literacy"

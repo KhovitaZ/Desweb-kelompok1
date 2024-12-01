@@ -8,7 +8,7 @@ import AboutUs from "./components/AboutUs/AboutUs";
 import SubBerita from "./components/Berita/Finansial";
 import Pembayaran from "./components/Langganan/Pembayaran";
 import SubPembayaran from "./components/Langganan/subPembayaran";
-import SubProgram from "./components/Program/subProgram";
+import SubProgram from "./components/Program/SubProgram";
 import MarketStrategy from "./components/Program/MarketStrategy";
 import FinancialBenchmarks from "./components/Program/FinancialBenchmarks";
 import ProductDevelopment from "./components/Program/ProductDevelopment";

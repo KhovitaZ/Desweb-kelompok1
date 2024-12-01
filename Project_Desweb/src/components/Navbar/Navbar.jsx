@@ -4,6 +4,7 @@ import { Link } from "react-router-dom"; // Import Link dari React Router
 import DarkMode from "./DarkMode";
 
 
+
 const Navbar = () => {
   return (
     <div className="dark:text[] fixed h-[75px] md:h-[75px] lg:h-[84px] w-full bg-[#55B0F1] flex flex-row justify-between items-center top-0 z-40">
@@ -15,11 +16,11 @@ const Navbar = () => {
           <h1 className="font-semibold text-[14px] md:text-[17px] lg:text-[24px] xl:text-[28px]">Startup Academy</h1>
         </div>
         <div className="hidden sm:flex text-[16px] md:text-[12px] lg:text-[16px] gap-2 md:gap-2 lg:gap-7 xl:gap-10 justify-center items-center pl-5">
-          <a href="#homePage">Home</a>
+          <a href="/">Home</a>
           <Link to="/subProgram"><a>Program</a></Link>
-          <Link to="/program"><a href="#event">Event</a></Link>
-          <Link to="/program"><a href="#berita">Berita</a></Link>
-          <a href="#FAQ">FAQ</a>
+          <Link to="/subEvent"><a href="#event">Event</a></Link>
+          <Link to="/beritaUtama"><a href="#berita">Berita</a></Link>
+          <a href="/">FAQ</a>
           <Link to="/langganan">Langganan</Link>
         </div>
       </div>

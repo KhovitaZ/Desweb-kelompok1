@@ -63,14 +63,14 @@ const subProgram = () => {
                     </svg>
                 </label>
             </div>
-            <div className="flex flex-col gap-10 bg-[#E0F3FF] md:h-[550px] lg:h-[450px] my-10 p-6">
+            <div className="flex flex-col gap-10 bg-[#E0F3FF] dark:bg-gray-900 md:h-[550px] lg:h-[450px] my-10 p-6">
                 <div className="flex justify-start">
                     <p className="text-[36px] font-semibold">Materi Startup Academy</p>
                 </div>
                 <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                     {/* card section */}
                     {ProgramData.map((data) => (
-                    <div key={data.id} className="flex justify-between bg-[#A2DBFF] h-[100px] sm:h-[123px] lg:w-[306px] xl:w-[380px] 2xl:w-[450px] p-5 rounded-[20px]">
+                    <div key={data.id} className="flex justify-between bg-[#A2DBFF] dark:bg-gray-700 h-[100px] sm:h-[123px] lg:w-[306px] xl:w-[380px] 2xl:w-[450px] p-5 rounded-[20px]">
                         <div className="flex flex-row justify-start items-center gap-4">
                             <img src={data.img} className="w-[70px] sm:w-[95px] object-cover rounded-[20px]"/>
                             <p className="text-[11px] sm:text-[14px] xl:text-[18px] font-bold">{data.title}</p>
