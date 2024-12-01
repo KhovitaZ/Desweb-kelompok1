@@ -4,6 +4,7 @@ import HomePage from "./components/HomePage/HomePage";
 import RegisterPage from "./components/Daftar/Daftar";
 import Login from "./components/Login/Login";
 import Langganan from "./components/Langganan/Langganan";
+import AboutUs from "./components/AboutUs/AboutUs";
 import SubBerita from "./components/Berita/subBerita";
 import Pembayaran from "./components/Langganan/Pembayaran";
 import SubPembayaran from "./components/Langganan/subPembayaran";
@@ -62,6 +63,7 @@ const App = () => {
           <Route path="/daftar" element={<RegisterPage />} />
           <Route path="/subberita" element={<SubBerita />} />
           <Route path="/langganan" element={<Langganan />} />
+          <Route path="/aboutUs" element={<AboutUs />} />
           <Route path="/pembayaran" element={<Pembayaran />} />
           <Route path="/subpembayaran" element={<SubPembayaran />} />
           <Route path="/subprogram" element={<SubProgram />} />
