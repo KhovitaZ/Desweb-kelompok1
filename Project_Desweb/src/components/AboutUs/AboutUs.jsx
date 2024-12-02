@@ -1,14 +1,18 @@
 import React from "react";
+import imageHome from "../../assets/homepage/home.svg";
+
+import Navbar from "../Navbar/Navbar";
 
 const App = () => {
   return (
     <div className="bg-gradient-to-b from-[#EEEEEE] via-[#D4EDFF] to-[#50B5FF]">
+      <Navbar />
       {/* Hero Section */}
-      <div className="relative">
+      <div className="relative mt-24">
         <div
-          className="w-full h-96 bg-cover bg-center"
+          className="w-full h-96 bg-cover bg-center m-10"
           style={{
-            backgroundImage: "url('src/assets/Berita/berita.jpg')",
+            backgroundImage: `url(${imageHome})`,
           }}
         ></div>
         <div className="text-center py-6">

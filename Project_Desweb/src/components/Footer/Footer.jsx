@@ -28,7 +28,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="text-center md:text-left space-y-2">
-            <a href="#" className="text-[10px] sm:text-[15px] md:text-[18px] font-semibold block hover:underline dark:hover:text-gray-400">Tentang Kami</a>
+            <a href="/aboutUs" className="text-[10px] sm:text-[15px] md:text-[18px] font-semibold block hover:underline dark:hover:text-gray-400">Tentang Kami</a>
             <a href="#" className="text-[10px] sm:text-[15px] md:text-[18px] font-semibold block hover:underline dark:hover:text-gray-400">Hubungi Kami</a>
             <a href="#" className="text-[10px] sm:text-[15px] md:text-[18px] font-semibold block hover:underline dark:hover:text-gray-400">FAQ</a>
           </div>
